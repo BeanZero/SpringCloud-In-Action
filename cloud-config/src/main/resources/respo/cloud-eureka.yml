@@ -15,10 +15,6 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone:
-        - http://eureke:8761/eureka/
-        - http://eureka:8762/eureka/
-        - http://eureka:8763/eureka/
-#      defaultZone: http://${ARGS_EUREKA1_HOSTNAME}:${ARGS_EUREKA1_PORT}/eureka/, \
-#        http://${ARGS_EUREKA2_HOSTNAME}:${ARGS_EUREKA2_PORT}/eureka/, \
-#        http://${ARGS_EUREKA3_HOSTNAME}:${ARGS_EUREKA3_PORT}/eureka/
+      defaultZone: http://${ARGS_EUREKA1_HOSTNAME}:${ARGS_EUREKA1_PORT}/eureka/, \
+        http://${ARGS_EUREKA2_HOSTNAME}:${ARGS_EUREKA2_PORT}/eureka/, \
+        http://${ARGS_EUREKA3_HOSTNAME}:${ARGS_EUREKA3_PORT}/eureka/
