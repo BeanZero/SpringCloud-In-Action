@@ -1,0 +1,32 @@
+server:
+  port: ${server.port}
+
+spring:
+  application:
+    name: cloud-config
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          uri: https://github.com/BeanZero/SpringCloud-In-Action/tree/master/common-dependencies
+          search-paths: cloud-config/src/main/resources/respo
+#          username: ${ARGS_CONFIG_SERVICE_USERNAME}
+#          password: ${ARGS_CONFIG_SERVICE_PASSWORD}
+
+eureka:
+  client:
+    service-url:
+      defaultZone:
+          - http://${ARGS_EUREKA1_HOSTNAME}:${ARGS_EUREKA1_PORT}/eureka/
+          - http://${ARGS_EUREKA2_HOSTNAME}:${ARGS_EUREKA2_PORT}/eureka/
+          - http://${ARGS_EUREKA3_HOSTNAME}:${ARGS_EUREKA3_PORT}/eureka/
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health, info

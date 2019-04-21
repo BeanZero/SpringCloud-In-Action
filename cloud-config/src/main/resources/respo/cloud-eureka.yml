@@ -1,0 +1,21 @@
+server:
+  port: ${ARGS_EUREKA_SERVER_PORT}
+
+eureka:
+  instance:
+    hostname: ${ARGS_EUREKA_HOSTNAME}
+    prefer-ip-address: false
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    lease-renewal-interval-in-seconds: 10
+    lease-expiration-duration-in-seconds: 30
+  server:
+    enable-self-preservation: true
+    eviction-interval-timer-in-ms: 10000
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone:
+          - http://${ARGS_EUREKA1_HOSTNAME}:${ARGS_EUREKA1_PORT}/eureka/
+          - http://${ARGS_EUREKA2_HOSTNAME}:${ARGS_EUREKA2_PORT}/eureka/
+          - http://${ARGS_EUREKA3_HOSTNAME}:${ARGS_EUREKA3_PORT}/eureka/
