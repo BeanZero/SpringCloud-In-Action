@@ -9,7 +9,7 @@ spring:
       label: master
       server:
         git:
-          uri: https://github.com/BeanZero/SpringCloud-In-Action/tree/master/common-dependencies
+          uri: https://github.com/BeanZero/SpringCloud-In-Action
           search-paths: cloud-config/src/main/resources/respo
 #          username: ${ARGS_CONFIG_SERVICE_USERNAME}
 #          password: ${ARGS_CONFIG_SERVICE_PASSWORD}
