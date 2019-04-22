@@ -1,5 +1,5 @@
 server:
-  port: ${server.port}
+  port: ${ARGS_CONFIG_SERVICE_PORT}
 
 spring:
   application:
@@ -13,6 +13,10 @@ spring:
           search-paths: cloud-config/src/main/resources/respo
 #          username: ${ARGS_CONFIG_SERVICE_USERNAME}
 #          password: ${ARGS_CONFIG_SERVICE_PASSWORD}
+  security:
+    user:
+      name: ${ARGS_CONFIG_SECURITY_USERNAME}
+      password: ${ARGS_CONFIG_SECURITY_PASSWORD}
 
 eureka:
   client:
@@ -26,6 +30,7 @@ management:
   endpoint:
     health:
       show-details: always
+
   endpoints:
     web:
       exposure:

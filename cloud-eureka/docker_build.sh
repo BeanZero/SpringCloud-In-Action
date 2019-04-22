@@ -5,4 +5,4 @@ echo -e "param required : version \n"
 exit
 fi
 
-docker build -t scai/cloud-config:$1 .
+docker build -t scai/cloud-eureka:$1 .

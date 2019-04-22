@@ -6,3 +6,5 @@ spring:
       uri: http://cloud-config:${ARGS_CONFIG_SERVICE_PORT}
       name: cloud-eureka
       label: master
+      username: ${ARGS_CONFIG_SECURITY_USERNAME}
+      password: ${ARGS_CONFIG_SECURITY_PASSWORD}

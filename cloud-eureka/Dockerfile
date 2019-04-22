@@ -12,11 +12,11 @@ ENV LANG="zh_CN.UTF-8"
 ENV ARGS = ""
 
 # add app
-ADD ./target/cloud-config.jar /app/
+ADD ./target/cloud-eureka.jar /app/
 
 # run environment variable
-#CMD ["java", "-Xmx200m", "-jar", "/app/cloud-config.jar", "$ARGS"]
-ENTRYPOINT ["sh","-c","java -Xmx200m -jar /app/cloud-config.jar $ARGS"]
+#CMD ["java", "-Xmx200m", "-jar", "/app/cloud-eureka.jar", "$ARGS"]
+ENTRYPOINT ["sh","-c","java -Xmx200m -jar /app/cloud-eureka.jar $ARGS"]
 
 # expose
 EXPOSE 22
