@@ -1,0 +1,77 @@
+version: '3'
+services:
+  cloud-eureka1:
+    image: scia/cloud-eureka:$eureka_version
+    container_name: cloud-eureka1
+    extra_hosts:
+      - "config:10.10.10.104"
+      - "config1:10.10.10.104"
+      - "config2:10.10.10.104"
+      - "eureka1:10.10.10.104"
+      - "eureka2:10.10.10.104"
+      - "eureka3:10.10.10.104"
+    privileged: true
+    ports:
+      - "8761:8761"
+    environment:
+      ARGS: "\
+      --ARGS_CONFIG_SERVICE_HOST=config \
+      --ARGS_CONFIG_SERVICE_PORT1=8888 \
+      --ARGS_CONFIG_SERVICE_PORT2=8889 \
+      --ARGS_CONFIG_SECURITY_USERNAME=admin \
+      --ARGS_CONFIG_SECURITY_PASSWORD=111 \
+      --ARGS_EUREKA_HOSTNAME=eureka1 \
+      --ARGS_EUREKA_SERVER_PORT=8761 \
+      --ARGS_EUREKA1_HOSTNAME=eureka1 --ARGS_EUREKA1_PORT=8761 \
+      --ARGS_EUREKA2_HOSTNAME=eureka2 --ARGS_EUREKA2_PORT=8762 \
+      --ARGS_EUREKA3_HOSTNAME=eureka3 --ARGS_EUREKA3_PORT=8763"
+  cloud-eureka2:
+    image: scia/cloud-eureka:$eureka_version
+    container_name: cloud-eureka2
+    extra_hosts:
+      - "config:10.10.10.104"
+      - "config1:10.10.10.104"
+      - "config2:10.10.10.104"
+      - "eureka1:10.10.10.104"
+      - "eureka2:10.10.10.104"
+      - "eureka3:10.10.10.104"
+    privileged: true
+    ports:
+      - "8762:8762"
+    environment:
+      ARGS: "\
+      --ARGS_CONFIG_SERVICE_HOST=config \
+      --ARGS_CONFIG_SERVICE_PORT1=8888 \
+      --ARGS_CONFIG_SERVICE_PORT2=8889 \
+      --ARGS_CONFIG_SECURITY_USERNAME=admin \
+      --ARGS_CONFIG_SECURITY_PASSWORD=111 \
+      --ARGS_EUREKA_HOSTNAME=eureka2 \
+      --ARGS_EUREKA_SERVER_PORT=8762 \
+      --ARGS_EUREKA1_HOSTNAME=eureka1 --ARGS_EUREKA1_PORT=8761 \
+      --ARGS_EUREKA2_HOSTNAME=eureka2 --ARGS_EUREKA2_PORT=8762 \
+      --ARGS_EUREKA3_HOSTNAME=eureka3 --ARGS_EUREKA3_PORT=8763"
+  cloud-eureka3:
+    image: scia/cloud-eureka:$eureka_version
+    container_name: cloud-eureka3
+    extra_hosts:
+      - "config:10.10.10.104"
+      - "config1:10.10.10.104"
+      - "config2:10.10.10.104"
+      - "eureka1:10.10.10.104"
+      - "eureka2:10.10.10.104"
+      - "eureka3:10.10.10.104"
+    privileged: true
+    ports:
+      - "8763:8763"
+    environment:
+      ARGS: "\
+      --ARGS_CONFIG_SERVICE_HOST=config \
+      --ARGS_CONFIG_SERVICE_PORT1=8888 \
+      --ARGS_CONFIG_SERVICE_PORT2=8889 \
+      --ARGS_CONFIG_SECURITY_USERNAME=admin \
+      --ARGS_CONFIG_SECURITY_PASSWORD=111 \
+      --ARGS_EUREKA_HOSTNAME=eureka3 \
+      --ARGS_EUREKA_SERVER_PORT=8763 \
+      --ARGS_EUREKA1_HOSTNAME=eureka1 --ARGS_EUREKA1_PORT=8761 \
+      --ARGS_EUREKA2_HOSTNAME=eureka2 --ARGS_EUREKA2_PORT=8762 \
+      --ARGS_EUREKA3_HOSTNAME=eureka3 --ARGS_EUREKA3_PORT=8763"

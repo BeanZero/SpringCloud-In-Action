@@ -3,16 +3,40 @@ services:
   cloud-config1:
     image: scia/cloud-config:$config_version
     container_name: cloud-config1
+    hostname: config1
+    extra_hosts:
+      - "config:10.10.10.104"
+      - "eureka1:10.10.10.104"
+      - "eureka2:10.10.10.104"
+      - "eureka3:10.10.10.104"
     privileged: true
     ports:
       - "8888:8888"
     environment:
-      ARGS: "--ARGS_CONFIG_SECURITY_USERNAME=admin --ARGS_CONFIG_SECURITY_PASSWORD=111 --ARGS_CONFIG_SERVICE_PORT=8888 --ARGS_EUREKA1_HOSTNAME=eureka1 --ARGS_EUREKA1_PORT=8761 --ARGS_EUREKA2_HOSTNAME=eureka2 --ARGS_EUREKA2_PORT=8762 --ARGS_EUREKA3_HOSTNAME=eureka3 --ARGS_EUREKA3_PORT=8763"
+      ARGS: "\
+      --ARGS_CONFIG_SECURITY_USERNAME=admin \
+      --ARGS_CONFIG_SECURITY_PASSWORD=111 \
+      --ARGS_CONFIG_SERVICE_PORT=8888 \
+      --ARGS_EUREKA1_HOSTNAME=eureka1 --ARGS_EUREKA1_PORT=8761 \
+      --ARGS_EUREKA2_HOSTNAME=eureka2 --ARGS_EUREKA2_PORT=8762 \
+      --ARGS_EUREKA3_HOSTNAME=eureka3 --ARGS_EUREKA3_PORT=8763"
   cloud-config2:
     image: scia/cloud-config:$config_version
     container_name: cloud-config2
+    hostname: config2
+    extra_hosts:
+      - "config:10.10.10.104"
+      - "eureka1:10.10.10.104"
+      - "eureka2:10.10.10.104"
+      - "eureka3:10.10.10.104"
     privileged: true
     ports:
       - "8889:8889"
     environment:
-      ARGS: "--ARGS_CONFIG_SECURITY_USERNAME=admin --ARGS_CONFIG_SECURITY_PASSWORD=111 --ARGS_CONFIG_SERVICE_PORT=8889 --ARGS_EUREKA1_HOSTNAME=eureka1 --ARGS_EUREKA1_PORT=8761 --ARGS_EUREKA2_HOSTNAME=eureka2 --ARGS_EUREKA2_PORT=8762 --ARGS_EUREKA3_HOSTNAME=eureka3 --ARGS_EUREKA3_PORT=8763"
+      ARGS: "\
+      --ARGS_CONFIG_SECURITY_USERNAME=admin \
+      --ARGS_CONFIG_SECURITY_PASSWORD=111 \
+      --ARGS_CONFIG_SERVICE_PORT=8889 \
+      --ARGS_EUREKA1_HOSTNAME=eureka1 --ARGS_EUREKA1_PORT=8761 \
+      --ARGS_EUREKA2_HOSTNAME=eureka2 --ARGS_EUREKA2_PORT=8762 \
+      --ARGS_EUREKA3_HOSTNAME=eureka3 --ARGS_EUREKA3_PORT=8763"

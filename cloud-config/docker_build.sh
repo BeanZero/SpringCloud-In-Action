@@ -7,4 +7,6 @@ fi
 
 mvn clean install -Dmaven.test.skip=true
 
+docker rmi scia/cloud-config:$1
+
 docker build -t scia/cloud-config:$1 .

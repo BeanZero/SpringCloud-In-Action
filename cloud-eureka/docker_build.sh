@@ -5,4 +5,8 @@ echo -e "param required : version \n"
 exit
 fi
 
-docker build -t scai/cloud-eureka:$1 .
+mvn clean install -Dmaven.test.skip=true
+
+docker rmi scia/cloud-eureka:$1
+
+docker build -t scia/cloud-eureka:$1 .
