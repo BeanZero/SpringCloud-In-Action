@@ -5,4 +5,6 @@ echo -e "param required : version \n"
 exit
 fi
 
-docker build -t scai/cloud-config:$1 .
+mvn clean install -Dmaven.test.skip=true
+
+docker build -t scia/cloud-config:$1 .

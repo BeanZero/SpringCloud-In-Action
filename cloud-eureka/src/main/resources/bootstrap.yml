@@ -3,7 +3,9 @@ spring:
     name: cloud-eureka
   cloud:
     config:
-      uri: http://cloud-config:${ARGS_CONFIG_SERVICE_PORT}
+      uri:
+        - http://cloud-config:${ARGS_CONFIG_SERVICE_PORT1}
+        - http://cloud-config:${ARGS_CONFIG_SERVICE_PORT2}
       name: cloud-eureka
       label: master
       username: ${ARGS_CONFIG_SECURITY_USERNAME}
