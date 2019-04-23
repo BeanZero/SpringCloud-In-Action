@@ -5,10 +5,9 @@ services:
     container_name: cloud-config1
     hostname: config1
     extra_hosts:
-      - "config:10.10.10.104"
-      - "eureka1:10.10.10.104"
-      - "eureka2:10.10.10.104"
-      - "eureka3:10.10.10.104"
+      - "eureka1:$eureka_host_ip"
+      - "eureka2:$eureka_host_ip"
+      - "eureka3:$eureka_host_ip"
     privileged: true
     ports:
       - "8888:8888"
@@ -25,10 +24,9 @@ services:
     container_name: cloud-config2
     hostname: config2
     extra_hosts:
-      - "config:10.10.10.104"
-      - "eureka1:10.10.10.104"
-      - "eureka2:10.10.10.104"
-      - "eureka3:10.10.10.104"
+      - "eureka1:$eureka_host_ip"
+      - "eureka2:$eureka_host_ip"
+      - "eureka3:$eureka_host_ip"
     privileged: true
     ports:
       - "8889:8889"
