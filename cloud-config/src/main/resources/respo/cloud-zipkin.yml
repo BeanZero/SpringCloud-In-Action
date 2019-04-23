@@ -1,10 +1,10 @@
 server:
-  port: ${ARGS_EUREKA_SERVER_PORT}
+  port: ${ARGS_ZIPKIN_SERVER_PORT}
 
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka1:8761/eureka/, http://eureka2:8762/eureka/, http://eureka3:8763/eureka/
+      defaultZone: http://${ARGS_EUREKA1_HOSTNAME}:${ARGS_EUREKA1_PORT}/eureka/, http://${ARGS_EUREKA2_HOSTNAME}:${ARGS_EUREKA2_PORT}/eureka/, http://${ARGS_EUREKA3_HOSTNAME}:${ARGS_EUREKA3_PORT}/eureka/
 
 management:
   metrics:
