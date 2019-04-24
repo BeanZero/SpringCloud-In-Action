@@ -1,5 +1,5 @@
 server:
-  port: ${ARGS_SERVICE_PROVIDER}
+  port: ${ARGS_PROVIDER_SERVER_PORT}
 
 spring:
   zipkin:
