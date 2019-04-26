@@ -5,7 +5,7 @@ spring:
     config:
       uri:
         - http://${ARGS_CONFIG_SERVICE_HOST1}:${ARGS_CONFIG_SERVICE_PORT1}
-        - http://${ARGS_CONFIG_SERVICE_HOST2}:${ARGS_CONFIG_SERVICE_PORT2}
+#        - http://${ARGS_CONFIG_SERVICE_HOST2}:${ARGS_CONFIG_SERVICE_PORT2}
       name: cloud-zipkin
       label: master
       username: ${ARGS_CONFIG_SECURITY_USERNAME}
