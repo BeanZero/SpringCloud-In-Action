@@ -22,6 +22,7 @@
         <java.version>1.8</java.version>
         <spring-cloud.version>Greenwich.SR1</spring-cloud.version>
         <zipkin.version>2.11.13</zipkin.version>
+        <scia.common-base.version>1.0-SNAPSHOT</scia.common-base.version>
     </properties>
 
     <dependencyManagement>
@@ -45,6 +46,14 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.scia</groupId>
+            <artifactId>common-base</artifactId>
+            <version>${scia.common-base.version}</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>

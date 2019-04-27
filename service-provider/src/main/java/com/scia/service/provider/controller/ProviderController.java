@@ -1,6 +1,8 @@
 package com.scia.service.provider.controller;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -10,9 +12,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ProviderController {
 
-    @GetMapping(value = "/demo")
-    public String demo(String msg) {
-        return String.format("demo is [%s]", msg);
+    @Value(value = "${server.port}")
+    private String port;
+
+    @GetMapping(value = "/say/{speak}")
+    public String say(@PathVariable String speak, String token) {
+        return String.format("service port is [%s], he say [%s], token is [%s]", port, speak, token);
     }
 
 }
