@@ -21,18 +21,18 @@ public class ConsumerRibbonService {
     private RestTemplate restTemplate;
 
     @HystrixCommand(fallbackMethod = "sayRemoteError")
-    public Result<JSONObject> sayRemote(String msg, String token) {
+    public Result<JSONObject> sayRemote(String speak, String token) {
         String jsonString = restTemplate.getForObject(new StringBuilder("http://service-provider/say/")
-                        .append(msg).append("/")
+                        .append(speak).append("/")
                         .append(StringUtils.isNotBlank(token) ? "?token=" + token: "")
                         .toString(), String.class);
         Result<JSONObject> results = JSON.parseObject(jsonString, Result.class);
         return results;
     }
 
-    public Result<JSONObject> sayRemoteError(String msg, String token) {
+    public Result<JSONObject> sayRemoteError(String speak, String token) {
         return new Result(CodeStatus.FAILED.getValue(), CodeStatus.FAILED.getReasonPhrase(),
-                String.format("Your request message is [%s], token is [%s], but this request is failed !", msg, token));
+                String.format("Your request message is [%s], token is [%s], but this request is failed !", speak, token));
     }
 
 }
