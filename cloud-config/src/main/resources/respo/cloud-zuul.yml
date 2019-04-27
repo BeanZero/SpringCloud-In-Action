@@ -10,12 +10,6 @@ spring:
     sampler:
       probability: 1.0
 
-#zuul:
-#  routes:
-#    api-provider:
-#      path: /api/provider/**
-#      service-id: service-provider
-
 eureka:
   client:
     service-url:
