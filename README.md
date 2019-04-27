@@ -17,7 +17,7 @@
 ├─cloud-admin  -------------------- 服务监控(待续)
 ├─service-provider  --------------- 服务提供者(demo)
 ├─service-consumer-ribbon  -------- 服务消费者Ribbon模式(demo)
-├─service-consumer-feign ---------- 服务消费者feign模式(待续)
+├─service-consumer-feign ---------- 服务消费者feign模式(demo)
 ```
 
 ### 关于Docker
