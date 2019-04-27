@@ -44,6 +44,16 @@
                 <artifactId>zipkin-autoconfigure-ui</artifactId>
                 <version>${zipkin.version}</version>
             </dependency>
+            <!--<dependency>-->
+                <!--<groupId>com.fasterxml.jackson.jaxrs</groupId>-->
+                <!--<artifactId>jackson-jaxrs-xml-provider</artifactId>-->
+            <!--</dependency>-->
+            <!-- common-base -->
+            <dependency>
+                <groupId>com.scia</groupId>
+                <artifactId>common-base</artifactId>
+                <version>${scia.common-base.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
