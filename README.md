@@ -14,7 +14,7 @@
 ├─cloud-eureka -------------------- 服务注册中心(注册与发现)
 ├─cloud-zipkin -------------------- 分布式链路跟踪
 ├─cloud-zuul   -------------------- 路由网关
-├─cloud-admin  -------------------- 服务监控(待续)
+├─cloud-admin  -------------------- 服务监控
 ├─service-provider  --------------- 服务提供者(demo)
 ├─service-consumer-ribbon  -------- 服务消费者Ribbon模式(demo)
 ├─service-consumer-feign ---------- 服务消费者feign模式(demo)
