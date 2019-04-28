@@ -1,6 +1,12 @@
 server:
   port: ${ARGS_EUREKA_SERVER_PORT}
 
+spring:
+  boot:
+    admin:
+      client:
+        url: http://${ARGS_ADMIN_HOSTNAME}:${ARGS_ADMIN_PORT}
+
 eureka:
   instance:
     hostname: ${ARGS_EUREKA_HOSTNAME}

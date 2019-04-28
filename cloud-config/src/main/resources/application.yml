@@ -17,6 +17,10 @@ spring:
     user:
       name: ${ARGS_CONFIG_SECURITY_USERNAME}
       password: ${ARGS_CONFIG_SECURITY_PASSWORD}
+  boot:
+    admin:
+      client:
+        url: http://${ARGS_ADMIN_HOSTNAME}:${ARGS_ADMIN_PORT}
 
 eureka:
   client:

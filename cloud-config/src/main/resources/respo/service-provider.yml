@@ -9,6 +9,10 @@ spring:
   sleuth:
     sampler:
       probability: 1.0
+  boot:
+    admin:
+      client:
+        url: http://${ARGS_ADMIN_HOSTNAME}:${ARGS_ADMIN_PORT}
 
 eureka:
   client:
