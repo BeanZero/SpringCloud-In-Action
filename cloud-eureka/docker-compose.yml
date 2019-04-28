@@ -9,6 +9,7 @@ services:
       - "eureka1:$eureka_host_ip"
       - "eureka2:$eureka_host_ip"
       - "eureka3:$eureka_host_ip"
+      - "admin:$admin_host_ip"
     privileged: true
     ports:
       - "8761:8761"
@@ -20,6 +21,8 @@ services:
       --ARGS_CONFIG_SERVICE_PORT2=8889 \
       --ARGS_CONFIG_SECURITY_USERNAME=admin \
       --ARGS_CONFIG_SECURITY_PASSWORD=111 \
+      --ARGS_ADMIN_HOSTNAME=admin \
+      --ARGS_ADMIN_PORT=8100 \
       --ARGS_EUREKA_HOSTNAME=eureka1 \
       --ARGS_EUREKA_SERVER_PORT=8761 \
       --ARGS_EUREKA1_HOSTNAME=eureka1 --ARGS_EUREKA1_PORT=8761 \
@@ -34,6 +37,7 @@ services:
       - "eureka1:$eureka_host_ip"
       - "eureka2:$eureka_host_ip"
       - "eureka3:$eureka_host_ip"
+      - "admin:$admin_host_ip"
     privileged: true
     ports:
       - "8762:8762"
@@ -45,6 +49,8 @@ services:
       --ARGS_CONFIG_SERVICE_PORT2=8889 \
       --ARGS_CONFIG_SECURITY_USERNAME=admin \
       --ARGS_CONFIG_SECURITY_PASSWORD=111 \
+      --ARGS_ADMIN_HOSTNAME=admin \
+      --ARGS_ADMIN_PORT=8100 \
       --ARGS_EUREKA_HOSTNAME=eureka2 \
       --ARGS_EUREKA_SERVER_PORT=8762 \
       --ARGS_EUREKA1_HOSTNAME=eureka1 --ARGS_EUREKA1_PORT=8761 \
@@ -59,6 +65,7 @@ services:
       - "eureka1:$eureka_host_ip"
       - "eureka2:$eureka_host_ip"
       - "eureka3:$eureka_host_ip"
+      - "admin:$admin_host_ip"
     privileged: true
     ports:
       - "8763:8763"
@@ -70,6 +77,8 @@ services:
       --ARGS_CONFIG_SERVICE_PORT2=8889 \
       --ARGS_CONFIG_SECURITY_USERNAME=admin \
       --ARGS_CONFIG_SECURITY_PASSWORD=111 \
+      --ARGS_ADMIN_HOSTNAME=admin \
+      --ARGS_ADMIN_PORT=8100 \
       --ARGS_EUREKA_HOSTNAME=eureka3 \
       --ARGS_EUREKA_SERVER_PORT=8763 \
       --ARGS_EUREKA1_HOSTNAME=eureka1 --ARGS_EUREKA1_PORT=8761 \

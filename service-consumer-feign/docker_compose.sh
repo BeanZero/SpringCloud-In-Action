@@ -6,6 +6,7 @@ consumer_feign_version=1.0.0 \
 config_host_ip=192.168.1.100 \
 eureka_host_ip=192.168.1.100 \
 zipkin_host_ip=192.168.1.100 \
+admin_host_ip=192.168.1.100 \
 consumer_feign_host_ip=192.168.1.100 \
 docker-compose $@
 
@@ -14,6 +15,7 @@ docker-compose $@
 #config_host_ip=192.168.1.100 \
 #eureka_host_ip=192.168.1.100 \
 #zipkin_host_ip=192.168.1.100 \
+#admin_host_ip=192.168.1.100 \
 #consumer_feign_host_ip=192.168.1.100 \
 #docker-compose up -d
 
@@ -22,6 +24,7 @@ docker-compose $@
 #config_host_ip=192.168.1.100 \
 #eureka_host_ip=192.168.1.100 \
 #zipkin_host_ip=192.168.1.100 \
+#admin_host_ip=192.168.1.100 \
 #consumer_feign_host_ip=192.168.1.100 \
 #eureka_version=1.0.0 docker-compose restart
 
@@ -30,6 +33,7 @@ docker-compose $@
 #config_host_ip=192.168.1.100 \
 #eureka_host_ip=192.168.1.100 \
 #zipkin_host_ip=192.168.1.100 \
+#admin_host_ip=192.168.1.100 \
 #consumer_feign_host_ip=192.168.1.100 \
 #eureka_version=1.0.0 docker-compose stop
 
@@ -38,6 +42,7 @@ docker-compose $@
 #config_host_ip=192.168.1.100 \
 #eureka_host_ip=192.168.1.100 \
 #zipkin_host_ip=192.168.1.100 \
+#admin_host_ip=192.168.1.100 \
 #consumer_feign_host_ip=192.168.1.100 \
 #eureka_version=1.0.0 docker-compose down
 

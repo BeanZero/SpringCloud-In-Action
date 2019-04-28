@@ -6,6 +6,7 @@ provider_version=1.0.0 \
 config_host_ip=192.168.1.100 \
 eureka_host_ip=192.168.1.100 \
 zipkin_host_ip=192.168.1.100 \
+admin_host_ip=192.168.1.100 \
 provider_host_ip=192.168.1.100 \
 docker-compose $@
 

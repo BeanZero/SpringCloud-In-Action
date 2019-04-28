@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# config_version对应images的版本号，例如：scia/cloud-eureka:1.0.0
+# config_version对应images的版本号，例如：scia/cloud-admin:1.0.0
 
-zipkin_version=1.0.0 \
+admin_version=1.0.0 \
 config_host_ip=192.168.1.100 \
 eureka_host_ip=192.168.1.100 \
 zipkin_host_ip=192.168.1.100 \
