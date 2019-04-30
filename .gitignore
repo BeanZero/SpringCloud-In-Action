@@ -53,3 +53,6 @@ HELP.md
 
 ### virtual machine crash logs ###
 hs_err_pid*
+
+### MacOS ###
+.DS_Store
