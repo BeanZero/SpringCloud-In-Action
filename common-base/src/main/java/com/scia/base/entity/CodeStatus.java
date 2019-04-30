@@ -8,7 +8,7 @@ public enum CodeStatus {
 
     SUCCESS(20000, "成功"),
 
-    FAILED(20100, "失败"),
+    FAILED(10000, "失败"),
 
     UNAUTHORIZED(40001, "未经许可"),
 
