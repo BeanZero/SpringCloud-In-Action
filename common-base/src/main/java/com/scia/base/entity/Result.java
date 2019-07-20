@@ -2,11 +2,13 @@ package com.scia.base.entity;
 
 import com.alibaba.fastjson.JSON;
 
+import java.io.Serializable;
+
 /**
  * @author BeanZero
  * @date 2019-04-26
  */
-public class Result<T> {
+public class Result<T> extends BaseEntity {
 
     private int code;
 

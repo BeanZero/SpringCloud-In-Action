@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: service-common-zookeeper
+  cloud:
+    config:
+      uri:
+        - http://${ARGS_CONFIG_SERVICE_HOST1}:${ARGS_CONFIG_SERVICE_PORT1}
+      #        - http://${ARGS_CONFIG_SERVICE_HOST2}:${ARGS_CONFIG_SERVICE_PORT2}
+      name: service-common-zookeeper
+      label: master
+      username: ${ARGS_CONFIG_SECURITY_USERNAME}
+      password: ${ARGS_CONFIG_SECURITY_PASSWORD}
+
+zookeeper:
+  enabled: true
+  server: 127.0.0.1:2181,127.0.0.1:2182,127.0.0.1:2183
+  namespace: demo
+  digest: rt:rt  #zkCli.sh acl 命令 addauth digest mpush
+  sessionTimeoutMs: 1000 #会话超时时间，单位为毫秒，默认60000ms,连接断开后，其它客户端还能请到临时节点的时间
+  connectionTimeoutMs: 6000 #连接创建超时时间，单位为毫秒
+  maxRetries: 3 #最大重试次数
+  baseSleepTimeMs: 1000 #初始sleep时间 ,毫秒

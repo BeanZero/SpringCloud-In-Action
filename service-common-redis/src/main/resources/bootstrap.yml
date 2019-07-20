@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: service-common-redis
+  cloud:
+    config:
+      uri:
+        - http://${ARGS_CONFIG_SERVICE_HOST1}:${ARGS_CONFIG_SERVICE_PORT1}
+#        - http://${ARGS_CONFIG_SERVICE_HOST2}:${ARGS_CONFIG_SERVICE_PORT2}
+      name: service-common-redis
+      label: master
+      username: ${ARGS_CONFIG_SECURITY_USERNAME}
+      password: ${ARGS_CONFIG_SECURITY_PASSWORD}

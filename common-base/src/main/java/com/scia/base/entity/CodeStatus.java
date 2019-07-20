@@ -22,7 +22,6 @@ public enum CodeStatus {
 
     TOKENERROR(50003, "令牌失效");
 
-
     private final int value;
 
     private final String reasonPhrase;

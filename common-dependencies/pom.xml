@@ -24,6 +24,7 @@
         <zipkin.version>2.11.13</zipkin.version>
         <admin.version>2.1.4</admin.version>
         <scia.common-base.version>1.0-SNAPSHOT</scia.common-base.version>
+        <swagger2.version>2.9.2</swagger2.version>
     </properties>
 
     <dependencyManagement>
@@ -69,6 +70,16 @@
             <groupId>com.scia</groupId>
             <artifactId>common-base</artifactId>
             <version>${scia.common-base.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${swagger2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>${swagger2.version}</version>
         </dependency>
     </dependencies>
 
